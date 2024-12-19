@@ -1,0 +1,528 @@
+{
+	"info": {
+		"_postman_id": "0dc0ce03-56a3-4fad-9ac7-dee341a3d404",
+		"name": "LuxView",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31099772"
+	},
+	"item": [
+		{
+			"name": "registration user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Иван",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Иванов",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+7(999)999-99-99",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user1@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/registration",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user1@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/authorization",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "sKSfJGPvy86SjC4Blu9L1M1vV55gB-Jb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/account",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add rooms",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "TaWXp1ncyrK3l5YXTKHYHHNpkxRQB75T",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "number",
+							"value": "303А",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "class_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "photo_room",
+							"type": "file",
+							"src": "ViGnVcxO4/room-standart_01.52f4436743375e772a99cbd9955f2378.jpg"
+						},
+						{
+							"key": "description",
+							"value": "самый распространенный\nвариант проживания в отеле, что\nобъясняется бюджетной стоимостью",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1260",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/rooms/add",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"rooms",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all rooms",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3gThjMamxW-l5h85SR8qEBKQs3Dj-4gl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/rooms",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "самый уютный вариант для размещения одного клиента",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/rooms/edit?id_room=2",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"rooms",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id_room",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/rooms/search?classesRooms=vv",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"rooms",
+						"search"
+					],
+					"query": [
+						{
+							"key": "classesRooms",
+							"value": "vv"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "room_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "count_people",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/reservations/add",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"reservations",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "items reservation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "count",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/reservations",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/reservations/del?id_reservation=3",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"reservations",
+						"del"
+					],
+					"query": [
+						{
+							"key": "id_reservation",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new contract",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+7(843)435-23-23",
+							"type": "text"
+						},
+						{
+							"key": "date_checkin",
+							"value": "2024-11-19",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "онлайн",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/contract/add",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"contract",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all contracts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9aeORoKuHAbn8WCl_z9t7CeTjBbdXH1U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://k-novikova.xn--80ahdri7a.site/api/contracts",
+					"protocol": "http",
+					"host": [
+						"k-novikova",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
