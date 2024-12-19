@@ -279,7 +279,7 @@
 			"response": []
 		},
 		{
-			"name": "search service",
+			"name": "search room",
 			"request": {
 				"method": "GET",
 				"header": [],
